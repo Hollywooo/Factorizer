@@ -1,0 +1,7 @@
+C:\Users\jsirk\Dropbox\GB Files\C#\Factorizer\Factorizer\bin\Debug\Factorizer.exe.config
+C:\Users\jsirk\Dropbox\GB Files\C#\Factorizer\Factorizer\bin\Debug\Factorizer.exe
+C:\Users\jsirk\Dropbox\GB Files\C#\Factorizer\Factorizer\bin\Debug\Factorizer.pdb
+C:\Users\jsirk\Dropbox\GB Files\C#\Factorizer\Factorizer\obj\Debug\Factorizer.csprojAssemblyReference.cache
+C:\Users\jsirk\Dropbox\GB Files\C#\Factorizer\Factorizer\obj\Debug\Factorizer.csproj.CoreCompileInputs.cache
+C:\Users\jsirk\Dropbox\GB Files\C#\Factorizer\Factorizer\obj\Debug\Factorizer.exe
+C:\Users\jsirk\Dropbox\GB Files\C#\Factorizer\Factorizer\obj\Debug\Factorizer.pdb
