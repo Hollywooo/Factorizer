@@ -12,15 +12,44 @@ namespace Factorizer
         static void Main(string[] args)
         {
             string userDirection = "yes";
+            bool exit = false;
+            long maxValue = Convert.ToInt64(1E15);
             while (userDirection != "no")
             {
                 Console.WriteLine("Prime Factorization Program: please enter an integer.  ");
-                int.TryParse(Console.ReadLine().ToString(), out int userInput);
+                long.TryParse(Console.ReadLine().ToString(), out long userInput);
 
-                Factors.FactorOutput(Factors.Factorize(userInput));
-                Console.ReadKey();
-                Console.WriteLine("\r\n" + "Perform another factorization? yes/no" + "\r\n");
-                userDirection = Console.ReadLine().ToString();
+                if (userInput > maxValue || userInput == 0 )
+                {
+                    Console.WriteLine("Woah there turbo...let's try something a little less insane.");
+                }
+                else if (userInput <= maxValue && userInput > 1)
+                {
+                    Console.WriteLine("Ok let's do this!");
+
+                    Factors.FactorOutput(Factors.Factorize(userInput));
+                    Console.WriteLine("\r\n" + "Perform another factorization? yes/no");
+                    userDirection = Console.ReadLine().ToString();
+
+                    while (exit != true)
+                    {
+                        if (userDirection == "yes" || userDirection == "no")
+                        {
+                            exit = true;
+                        }
+                        else
+                        {
+                            exit = false;
+                            Console.WriteLine("\r\nI don't understand!  Did you mean 'yes' or 'no'?");
+                            userDirection = Console.ReadLine().ToString();
+                        }
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Hmmm.  Something was weird about that...try again maybe.");
+                }
+                
             }
 
             Console.WriteLine("\r\n" + "Goodbye!");

@@ -8,17 +8,17 @@ namespace Factorizer
 {
     class Factors
     {
-        int inputInt = new int();
-        List<int> factorList = new List<int>();
+        long inputInt = new long();
+        List<long> factorList = new List<long>();
 
-        public static Factors Factorize(int input)
+        public static Factors Factorize(long input)
         {
             Factors factorThis = new Factors();
             factorThis.inputInt = input;
 
-            int currentValue = factorThis.inputInt;
+            long currentValue = factorThis.inputInt;
             double value = factorThis.inputInt;            
-            int sqrMark = Convert.ToInt32(Math.Round(Math.Sqrt(value), 0, MidpointRounding.AwayFromZero));
+            long sqrMark = Convert.ToInt64(Math.Round(Math.Sqrt(value), 0, MidpointRounding.AwayFromZero));
             int iter = 2;
 
             while (iter <= sqrMark)
@@ -35,7 +35,7 @@ namespace Factorizer
                 }
             }
 
-            if (currentValue > iter)
+            if (currentValue >= iter)
             {
                 factorThis.factorList.Add(currentValue);
             }
